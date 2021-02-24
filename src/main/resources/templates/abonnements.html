@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+    <title>Abonnements  </title>
+
+  </head>
+
+  <body class="nav-md">
+        <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Abonnements pour notre parking</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">chercher</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>liste des abonnements</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                     
+                      <li><a  data-th-href="@{/addA}">  ajouter un abonnement</a>
+                      </li>
+                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><div class="x_panel">
+                
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Description</th>
+                          <th>Nombre du jour</th>
+                          <th>Tarif Dhs</th>
+                          <th>Nombre de clients</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-th-each="abonnement:${abonnements}">
+                          <th data-th-text="${abonnement.id}"></th>
+                          <td data-th-text="${abonnement.description}"></td>
+                          <td data-th-text="${abonnement.nbjour}"></td>
+                          <td data-th-text="${abonnement.tarif}"></td>
+                           <td>null</td>
+                            <td><a data-th-href="@{/editA/{id}(id=${abonnement.id})}" class="btn btn-success btn-sm fa fa-edit" ></a>
+                            <a onclick="javascript:return confirm('voulez vous supprimer?')" data-th-href="@{/deleteA/{id}(id=${abonnement.id})}" class="btn btn-danger btn-sm fa fa-unlock-alt"> Expiree</a>
+                            </td>
+                          
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+  </body>
+</html>

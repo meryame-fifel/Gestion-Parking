@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+    <title>Places </title>
+  </head>
+
+  <body class="nav-md">
+        <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Places</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">chercher</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>liste des places disponibles</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                     
+                    
+                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><div class="x_panel">
+                
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Libelle</th>
+                          <th>Tarif</th>
+                          <th>Disponibilite</th>
+                          
+                          <th>Vehicule stationnee</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-th-each="place:${places}">
+                          <th data-th-text="${place.id}"></th>
+                          <td data-th-text="${place.libelle}"></td>
+                          <td data-th-text="${place.tarif}"></td>
+                          <td data-th-text="${place.disponibilite}"></td>
+                          <td data-th-text="${place.vehicule}"></td>
+                            <td><a data-th-href="@{/editP/{id}(id=${place.id})}"  class="btn btn-success btn-sm fa fa-edit" ></a>
+                            <a onclick="javascript:return confirm('voulez vous supprimer?')" data-th-href="@{/deleteP/{id}(id=${place.id})}" class="btn btn-danger btn-sm fa fa-trash" ></a>
+                            </td>
+                          
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+  </body>
+</html>

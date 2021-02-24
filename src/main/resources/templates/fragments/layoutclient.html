@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title data-layout-title-pattern="$LAYOUT_TITLE | $CONTENT_TITLE">kechpark </title>
+
+    <!-- Bootstrap -->
+    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/webjars/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/webjars/nprogress/0.2.0/nprogress.css" rel="stylesheet">
+<!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    
+
+    <!-- Custom Theme Style -->
+    <link href="/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-automobile"></i> <span>KeshPark</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <br />
+
+            <!-- sidebar menu -->
+             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a data-th-href="@{/profilclient}"><i class="fa fa-home"></i> A PROPOS <span class="fa fa-chevron"></span></a>
+                  </li>
+                  <li><a data-th-href="@{/localisation}"><i class="fa fa-map-marker"></i> LOCALISATION <span class="fa fa-chevron"></span></a>
+                  </li>                  
+                  <li><a><i class="fa fa-ellipsis-h"></i> Places <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                  <li><a data-th-href="@{/placeclient/}">Toutes les places</a></li>
+                  
+                  </ul> 
+                  </li> 
+                   <li><a data-th-href="@{/addc}"><i class="fa fa-calendar"></i> Reservations <span class="fa fa-chevron"></span></a> 
+                  </li>            
+                   <li><a data-th-href="@{/abonnementsClient/}"><i class="fa fa-bars"></i> Abonnements <span class="fa fa-chevron"></span></a> 
+                  </li>
+                  
+                  
+                </ul>
+              </div>
+           
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+             <div data-th-replace="fragments/menuFooter :: menuFooter"></div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+        <!-- top navigation -->
+     <div data-th-replace="fragments/top2 :: top2"></div>
+        <!-- /top navigation -->
+        <!-- page content -->
+         <div data-layout-fragment="content2"></div>
+        <!-- /page content -->
+        <!-- footer content -->
+         <div data-th-replace="fragments/footer :: footer"></div>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/webjars/jquery/2.2.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
+   <script src="/webjars/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="/webjars/fastclick/1.0.6/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/webjars/nprogress/0.2.0/nprogress.js"></script>
+    
+     <!-- morris.js -->
+    <script src="../vendors/raphael/raphael.min.js"></script>
+    <script src="../vendors/morris.js/morris.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    
+    
+    <!-- Custom Theme Scripts -->
+    <script src="/js/custom.min.js"></script>
+  </body>
+</html>

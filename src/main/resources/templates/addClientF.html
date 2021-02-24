@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layoutclient}">
+  <head>
+    <title>PP </title>
+  </head>
+  <body class="nav-md">
+        <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content2">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Soyez les Bienvenue !</h3>
+              </div>              
+            </div>
+
+          
+             <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>s'inscrire <small>veuillez remplir ce petit formulaire s'il vous plait !</small></h2>
+                    
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                 
+                 
+        <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="#" data-th-action="@{addClientF}" data-th-object="${clientfidele}" method="post">
+
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="nom">Nom <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                           <input type="text" name="nom" class="form-control"   id="nom" placeholder="Nom de famille">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="prenom">Prenom <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="prenom" class="form-control"  id="prenom" placeholder="Prenom ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label for="CIN" class="col-form-label col-md-3 col-sm-3 label-align">CIN </label>
+                        <div class="col-md-6 col-sm-6 ">
+                         <input type="text" name="CIN" class="form-control"  id="CIN" placeholder="numero de carte nationnal">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <div id="gender" class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="male" class="join-btn"> &nbsp; Male &nbsp;
+                            </label>
+                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="female" class="join-btn"> Female
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label for="dateN" class="col-form-label col-md-3 col-sm-3 label-align">Date De Naissance <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="dateN" class="form-control"  id="dateN" placeholder="la date de naissance"> 
+                        </div>
+                      </div>
+                       <div class="item form-group">
+                        <label for="dateN" class="col-form-label col-md-3 col-sm-3 label-align">Telephone <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="tel" class="form-control"  id="tel" placeholder="le numero de telephone">  
+                        </div>
+                      </div>
+                       <div class="item form-group">
+                        <label for="dateN" class="col-form-label col-md-3 col-sm-3 label-align">Gmail <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                         <input type="text" name="gmail" class="form-control"  id="gmail" placeholder="votre adresse mail">  
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">                         
+						  <button class="btn btn-primary" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+
+                    </form>               
+
+                  </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+           
+        <!-- /page content -->
+  </body>
+</html>

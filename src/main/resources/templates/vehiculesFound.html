@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+        <title>Vehicules </title>
+  </head>
+  <body class="nav-md"> 
+        <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Vehicules</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Vehicule trouve</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><div class="x_panel">
+                
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Matricule</th>
+                          <th>couleur</th>
+                          <th>marque</th>
+                          <th>modele</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-th-each="vehicule:${vehicules}">
+                          <th data-th-text="${vehicule.id}"></th>
+                          <td data-th-text="${vehicule.matricule}"></td>
+                          <td data-th-text="${vehicule.couleur}"></td>
+                          <td data-th-text="${vehicule.marque}"></td>
+                           <td data-th-text="${vehicule.modele}"></td>
+                            <td>
+                            <a onclick="javascript:return confirm('voulez vous supprimer?')" data-th-href="@{/deleteV/{id}(id=${vehicule.id})}" class="btn btn-danger btn-sm fa fa-trash" ></a>
+                            </td>                        
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layoutclient}">
+  <head>
+       <title>... | </title>
+
+   
+  </head>
+
+  <body class="nav-md">
+            <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content2">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3> Profile</h3>
+              </div>             
+            </div>
+            
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="col-md-3 col-sm-3  profile_left">
+                      <div class="profile_img">
+                        <div id="crop-avatar">
+                          <!-- Current avatar -->
+                          <img class="img-responsive" src="images/parkMobile.PNG" style="width: 900px;height: 300px;" alt="Avatar" title="Change the avatar">
+                        </div>
+                      </div>
+                      <h3>WELCOME </h3>
+<form data-th-object="${parking}">
+                      <ul class="list-unstyled user_data" >
+                      
+                      <li>
+                          <i class="fa fa-car user-profile-icon"></i>
+                           <label for="nom" data-th-text="*{nom}">-</label>
+                        </li>
+                        
+                        <li><i class="fa fa-map-marker user-profile-icon" ></i>
+                        <label for="num" data-th-text="*{num}">-</label>
+                        <label for="quartier" data-th-text="*{quartier}">-</label>
+                        <label for="ville" data-th-text="*{ville}">-</label>
+                        </li>
+
+                        <li>
+                          <i class="fa fa-briefcase user-profile-icon"></i>
+                           <label for="type" data-th-text="*{type}">-</label>
+                        </li>
+                         <li>
+                          <i class="fa fa-tty user-profile-icon"></i>
+                           <label for="fixe" data-th-text="*{fixe}">-</label>
+                        </li>
+
+                        <li class="m-top-xs">
+                          <i class="fa fa-phone user-profile-icon"></i>
+                          <label for="tel" data-th-text="*{tel}">-</label>
+                          
+                        </li>
+                      </ul>
+
+                     
+</form>
+                    </div>
+                    <div class="col-md-9 col-sm-9 ">
+              <!-- start of user-activity-graph -->
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->      
+  </body>
+</html>

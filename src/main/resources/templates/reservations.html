@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+    <title>Reservations  </title>
+
+  </head>
+
+  <body class="nav-md">
+        <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+                   <div class="col-md-12 col-sm-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Reservations <small> des clients</small></h2>                   
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="x_content">
+                    <div class="table-responsive">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                            <th>
+                              <input type="checkbox" id="check-all" class="flat">
+                            </th>
+                            <th class="column-title">INDICE </th>
+                            <th class="column-title">Matricule </th>
+                            <th class="column-title">Couleur </th>
+                            <th class="column-title">Marque</th>  
+                            <th class="column-title">Modele</th>   
+                            <th class="column-title">Place Reservee</th>                        
+                            <th class="column-title no-link last"><span class="nobr">Details</span>
+                            </th>
+                            
+                          </tr>
+                        </thead>
+
+                        <tbody>                         
+                          <tr class="even pointer" data-th-each="vehicule:${vehicules}">
+                            <td class="a-center ">
+                              <input type="checkbox" class="flat" name="table_records">
+                            </td>
+                            <td class=" " data-th-text="${vehicule.id}"></td>
+                            <td class=" " data-th-text="${vehicule.matricule}"></td>
+                            <td class=" " data-th-text="${vehicule.couleur}"></td>
+                            <td class=" " data-th-text="${vehicule.marque}"></td>
+                            <td class=" " data-th-text="${vehicule.modele}"></td>  
+                            <td class=" " data-th-text="${vehicule.place}"></td>                          
+                            <td class=" last"><a>View</a>
+                            </td>
+                          </tr>                          
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
+                </div>
+              </div>
+             </div>
+          
+       
+        <!-- /page content -->
+  </body>
+</html>

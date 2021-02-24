@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+
+    <title>VVV</title>
+  </head>
+
+  <body class="nav-md">
+           
+
+        <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Utilisateurs</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">chercher</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Nouvel vehicule</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                     
+                      <li><a class="btn btn-light fa fa-plus">  ajouter vehicule</a>
+                      </li>
+                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><div class="x_panel">
+             <form action="#" data-th-action="@{addVehicule}" data-th-object="${vehicule}"   method="post">
+   	<div class="form-group">
+	   	<label for="matricule">Matricule</label>
+	    <input type="text" data-th-field="*{matricule}" class="form-control"   id="matricule" placeholder="matricule du vehicule"> 
+    </div>
+    <div class="form-group">
+    	<label for="couleur">Couleur</label>
+     	<input type="text" data-th-field="*{couleur}" class="form-control"  id="couleur" placeholder="couleur du vehicule"> 
+     </div>
+     <div class="form-group">
+    	<label for="marque">marque</label>
+     	<input type="text" data-th-field="*{marque}" class="form-control"  id="marque" placeholder="marque du vehicule"> 
+     </div>
+      <div class="form-group">
+	    <label for="modele">modele</label>
+	    <input type="text" data-th-field="*{modele}" class="form-control"  id="modele" placeholder="modele du vehicule"> 
+     </div>
+     <input type="submit" class="btn btn-primary"value="enregistrer">
+       </form> 
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+  </body>
+</html>

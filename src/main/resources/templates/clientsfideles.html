@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+       <title>CF </title>
+  </head>
+
+  <body class="nav-md">
+          <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Clients Fideles</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">chercher</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2 class="fa fa-heart">Nos clients</h2>
+                    <ul class="nav navbar-right panel_toolbox">                    
+                    
+                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><div class="x_panel">
+                
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Nom</th>
+                          <th>Preom</th>                          
+                          <th>CIN</th>
+                          <th>Date De Naissance</th>
+                          <th>Telephone</th>
+                          <th>Gmail</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-th-each="clientsfidele:${clientsfideles}">
+                          <th data-th-text="${clientsfidele.id}"></th>
+                          <td data-th-text="${clientsfidele.nom}"></td>
+                          <td data-th-text="${clientsfidele.prenom}"></td>
+                          <td data-th-text="${clientsfidele.CIN}"></td>
+                          <td data-th-text="${clientsfidele.dateN}"></td>
+                          <td data-th-text="${clientsfidele.tel}"></td>
+                          <td data-th-text="${clientsfidele.gmail}"></td>
+                            <td>
+                            <a onclick="javascript:return confirm('voulez vous supprimer?')" data-th-href="@{/deleteCf/{id}(id=${clientsfidele.id})}" class="btn btn-danger btn-sm fa fa-trash" ></a>
+                            </td>
+                          
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+  </body>
+</html>

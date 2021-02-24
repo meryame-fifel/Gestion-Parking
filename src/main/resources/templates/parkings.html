@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+    <title>Parkings </title>
+  </head>
+
+  <body class="nav-md">
+            <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Parking Info</h3>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                 <div class="x_content">        
+                     <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>kechpark</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Nom</th>
+                          <th>nombre de places</th>
+                          <th>nombre de places vides</th>
+                          <th>type</th>
+                          <th>quartier</th>
+                          <th>num</th>
+                          <th>ville</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-th-each="parking:${parkings}">
+                          <th data-th-text="${parking.id}"></th>
+                          <td data-th-text="${parking.nom}"></td>
+                          <td data-th-text="${parking.nbPlace}"></td>
+                          <td data-th-text="${parking.nbPlaceVides}"></td>
+                           <td data-th-text="${parking.type}"></td>
+                           <td data-th-text="${parking.quartier}"></td>
+                           <td data-th-text="${parking.num}"></td> 
+                            <td data-th-text="${parking.ville}"></td>
+                            <td><a class="btn btn-success btn-sm fa fa-edit" ></a><a onclick="javascript:return confirm('voulez vous supprimer?')"  class="btn btn-danger btn-sm fa fa-trash" ></a></td>
+                            <td></td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+        
+  </body>
+</html>

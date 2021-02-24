@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+    <title>PP </title>
+  </head>
+  <body class="nav-md">
+        <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Places</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">chercher</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <ul class="nav navbar-right panel_toolbox">
+                     
+                      <li><a class="btn btn-light fa fa-plus">  ajouter place</a>
+                      </li>
+                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><div class="x_panel">
+             <form action="#" data-th-action="@{addPlace}"
+              data-th-object="${place}"   method="post">
+   	<div class="form-group">
+	   	<label for="libelle">Libelle</label>
+	    <input type="text" data-th-field="*{libelle}" 
+	    class="form-control"   id="libelle" placeholder="libelle de la place"> 
+    </div>
+    <div class="form-group">
+    	<label for="tarif">Tarif Dhs</label>
+     	<input type="text" data-th-field="*{tarif}" 
+     	class="form-control"  id="tarif" placeholder="tarif de la place par /H"> 
+     </div>
+     <div class="form-group">
+    	<label for="disponibilite">Disponibilite</label>
+     	<input type="text" data-th-field="*{disponibilite}"
+     	 class="form-control"  id="disponibilite" placeholder="true / false"> 
+     </div>
+     <div class="form-group">
+    <label for="vehicule">vehicule stationné</label>
+     <select name="vehicule_id" class="form-control" >
+ 		 <option data-th-each ="vehicule: ${vehicules}" data-th-text="${vehicule.matricule}" 
+ 		 data-th-value="${vehicule.id}" data-th-id="${vehicule.id}" ></option>
+ 		 
+	</select>
+    
+     </div>
+     
+     <input type="submit" class="btn btn-primary"value="enregistrer">
+       </form> 
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+  </body>
+</html>

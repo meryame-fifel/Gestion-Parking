@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layoutclient}" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Abonnements  </title>
+
+  </head>
+
+  <body class="nav-md">
+        <!-- page content -->
+         <div class="right_col" role="main" data-layout-fragment="content2">
+                   <div class="col-md-12 col-sm-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>ABONNEMENTS <small>pour vous cher client !</small></h2>                   
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="x_content">
+                    
+                      
+                      <th:block data-th-each="abonnement : ${abonnements}">
+                      
+                      
+                        <!-- price element -->
+                        <div class="col-md-3 col-sm-6  ">
+                          <div class="pricing">
+                            <div class="title">
+                              <h2> <label for="description" data-th-text="${abonnement.description}">-</label></h2>
+                              <span><label for="nbjour"  data-th-text="${abonnement.nbjour}">-</label>J</span>
+                              <h1><label for="tarif"  data-th-text="${abonnement.tarif}" >-</label> Dhs</h1>
+                              
+                            </div>
+                            <div class="x_content">
+                              <div class="">
+                                <div class="pricing_features">
+                                <span><label for="nbjour"  data-th-text="${abonnement.nbjour}">-</label>J</span>
+                                  <ul class="list-unstyled text-left">
+                                    <li><i class="fa fa-check text-success"></i> access pour  <strong> tous type de voitures</strong></li>                                   
+                                    <li><i class="fa fa-check text-danger"></i> Securite <strong> Garantie</strong></li>
+                                    <li><i class="fa fa-check text-success"></i> <strong>Offre tous au long de la duree</strong></li>
+                                    <li><i class="fa fa-check text-danger"></i> All time </li>
+                                    <li><i class="fa fa-check text-success"></i> <strong>24/24</strong></li>
+                                    <li><i class="fa fa-check text-success"></i> <strong>7/7</strong> j</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="pricing_footer">
+                                <a class="btn btn-success btn-block" role="button"
+                                data-th-href="@{/view/{id}(id=${abonnement.id})}"> View </a>
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- price element -->
+</th:block>
+                      
+                    </div>
+                    </div>
+                </div>
+              </div>
+               
+        <!-- /page content -->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+  <head>
+       <title>... | </title>
+
+   
+  </head>
+
+  <body class="nav-md">
+            <!-- page content -->
+        <div class="right_col" role="main" data-layout-fragment="content">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3> Profile</h3>
+              </div>             
+            </div>
+            
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="col-md-3 col-sm-3  profile_left">
+                      
+                      <h3>Modification ! </h3>
+<form data-th-object="${parking}" data-th-action="@{/updateParking/{id}(id=${parking.id})}" method="post">
+                      <ul class="list-unstyled user_data" >
+                      
+                      <li>
+                          <i class="fa fa-car user-profile-icon"></i>
+                           <label for="nom">NOM :</label></br>
+                           <input type="text" data-th-field="*{nom}" id="nom" placeholder="nom">
+                           <span data-th-if="${#fields.hasErrors('nom')}" data-th-errors="*{nom}"></span>
+                        </li>
+                        
+                        <li><i class="fa fa-map-marker user-profile-icon" ></i>
+                        <label for="num">NUM DE BATIMENT :</label></br><input type="text" data-th-field="*{num}" id="num" placeholder="numero du batiment">
+                        <span data-th-if="${#fields.hasErrors('num')}" data-th-errors="*{num}"></span>
+                       <label for="quartier">QUARTIER :</label></br><input type="text" data-th-field="*{quartier}" id="quartier" placeholder="quartier">
+                       <span data-th-if="${#fields.hasErrors('quartier')}" data-th-errors="*{quartier}"></span>
+                       </br>
+                       <label for="ville">VILLE :</label></br><input type="text" data-th-field="*{ville}" id="ville" placeholder="ville">
+                       <span data-th-if="${#fields.hasErrors('ville')}" data-th-errors="*{ville}"></span>
+                        </li>
+
+                        <li>
+                          <i class="fa fa-briefcase user-profile-icon"></i>
+                           <label for="type">TYPE :</label></br><input type="text" data-th-field="*{type}" id="type" placeholder="type">
+                           <span data-th-if="${#fields.hasErrors('type')}" data-th-errors="*{type}"></span>
+                        </li>
+                         <li>
+                          <i class="fa fa-tty user-profile-icon"></i>
+                           <label for="fixe">FIX :</label></br><input type="text" data-th-field="*{fixe}" id="fixe" placeholder="fixe">
+                           <span data-th-if="${#fields.hasErrors('fixe')}" data-th-errors="*{fixe}"></span>
+                        </li>
+
+                        <li class="m-top-xs">
+                          <i class="fa fa-phone user-profile-icon"></i>
+                          <label for="tel">TELEPHONE :</label></br><input type="text" data-th-field="*{tel}" id="tel" placeholder="tel">
+                          <span data-th-if="${#fields.hasErrors('tel')}" data-th-errors="*{tel}"></span>
+                          
+                        </li>
+                      </ul>
+						<input type="submit" value="Enregistrer" class="btn btn-info">
+                      <br />
+</form>
+                    </div>
+                    <div class="col-md-9 col-sm-9 ">
+              <!-- start of user-activity-graph -->
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->      
+  </body>
+</html>
